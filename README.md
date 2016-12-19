@@ -1,0 +1,19 @@
+# abstract vs interface
+- 概要
+  - abstractとinterfaceのコード例。最終的に実現していること（stack）はどちらも一緒。
+- 共通
+  - 実装を省略し、サブクラスに実装を任せることができる。
+    - ただのスーパークラス(class)でも似たことは実現できるが、「実装を強制する」のがabstractやinterface。
+  - abstract/interfaceを継承して、新しいabstract/interfaceを作ることも可能。（更にその先のサブクラス作成時に実装を任せる）
+  - abstract/interfaceどちらも「実装を任せる」ことを強制しているため、このままではインスタンスを生成できない。
+  - 型として利用することは可能。
+- abstractとinterfaceの相違点
+  - abstract
+    - API定義だけでも良いし、実装を含んでも良い。
+    - 実装する側は「extends」。
+      - e.g., ``class Sub extends Abstract``
+  - interface
+    - 基本的にAPI定義だけを書く。実装は含まない。（実装を含めることができない）
+    - 実装する側は「implements」。
+    - 複数のinterfaceをまとめて実装することも可能。
+      - e.g., ``class Sub implements Interface1, Interfacd2``
